@@ -45,5 +45,8 @@ MVC Pattern Framework for Unity3d GUI System
     }
 ```
 
-### Create Controller and Presenter frome Template
+### Create Controller and Presenter from Template
+* Click menu `Template Scripts` and `Create`
+* Type class name and namespace
+* Then it will create two scripts, one `Controller` and one `Presenter` 
 ![Diagram](/Pic/EditorTool.png)
