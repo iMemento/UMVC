@@ -2,6 +2,8 @@
 ===
 MVC Pattern Framework for Unity3d GUI System
 
+![Diagram](/Pic/Diagram.png)
+
 ### Model
 
 * Holds no view data nor view state data.
