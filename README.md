@@ -31,7 +31,19 @@ MVC Pattern Framework for Unity3d GUI System
 
 ### NotificationCenter
 * A notification dispatch mechanism that enables the broadcast of information to registered observers.
+* Add observer in `Controllers`
+* Post notifications in `Models`
 
+<p>
+    void Start()
+    {
+        NotificationCenter.DefaultCenter.AddObserver(this, "UserDataChanged", UserDataChanged);
+    }
+    void OnDestroy()
+    {
+        NotificationCenter.DefaultCenter.RemoveObserver(this, "UserDataChanged");
+    }
+</p>
 
 ### Create Controller and Presenter frome Template
 ![Diagram](/Pic/EditorTool.png)

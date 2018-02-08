@@ -14,6 +14,7 @@ namespace Client.UI.Main
         void Start()
         {
             SetPresenter(GetComponent<MainPresenter>());
+            NotificationCenter.DefaultCenter.AddObserver(this, "UserDataChanged", UserDataChanged);
         }
 
         void Update()
@@ -21,6 +22,10 @@ namespace Client.UI.Main
 
         }
 
+        void OnDestroy()
+        {
+            NotificationCenter.DefaultCenter.RemoveObserver(this, "UserDataChanged");
+        }
 
         public void OnUserInput(string command, params object[] args)
         {
@@ -35,6 +40,10 @@ namespace Client.UI.Main
             presenter.RegisterIController(this);
         }
 
+        private void UserDataChanged()
+        {
+
+        }
         public static MainController Create(RectTransform parent, Vector2 localPos)
         {
             // todo:
