@@ -11,17 +11,21 @@ MVC Pattern Framework for Unity3d GUI System
 ### View
 * UGUI Prefabs
 
+### Presenter
+* Each Presenter corresponds to a View
+* Holds references to elements needed for drawing
+* Receive User Input
+* Notify `Controller` when an user input
+* This script is a UI refresh operation function set
+
 ### Controller
 
 * Controls view flow.
 * Holds the application state needed for that view
 * Will trigger events to notify external system of changes.
 * Handles events either triggered by the player in the `View` or triggered by the `Models` 
-
-### Presenter
-* Handle references to elements needed for drawing
-* Receive User Input
-* Notify `Controller` when an user input
-* Refresh UI details
+* Each Controller corresponds to a Presenter and holds the reference of it's `Presenter`   
+* Holds the references of the small `Controllers` under this controller
 
 ### NotificationCenter
+* A notification dispatch mechanism that enables the broadcast of information to registered observers.
